@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaibhava Sri Interior Works</title>
   <!-- Premium Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,17 +40,20 @@
         <a href="#contact" class="btn">Get in Touch</a>
       </div>
     </div>
+    <div class="scroll-down">&#8595;</div>
   </section>
 
   <!-- About -->
   <section id="about" class="about fade-in">
     <h2>About Us</h2>
+    <div class="divider"></div>
     <p>Vaibhava Sri Interiors transforms spaces into timeless expressions of luxury and comfort. Based in Telangana and Andhra Pradesh, we design across India with a passion for creativity and craftsmanship.</p>
   </section>
 
   <!-- Services -->
   <section id="services" class="services fade-in">
     <h2>Our Services</h2>
+    <div class="divider"></div>
     <div class="service-cards">
       <div class="card"><img src="images/livingroom.jpg" alt="Living Room"><h3>Living Room</h3></div>
       <div class="card"><img src="images/kitchen.jpg" alt="Kitchen"><h3>Kitchen</h3></div>
@@ -62,6 +65,7 @@
   <!-- Contact -->
   <section id="contact" class="contact fade-in">
     <h2>Contact Us</h2>
+    <div class="divider"></div>
     <p>
       📞 <a href="tel:+919603453944">+91 96034 53944</a><br>
       ✉️ <a href="mailto:vaibhavasriinteriors12@gmail.com">vaibhavasriinteriors12@gmail.com</a>
@@ -84,6 +88,13 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp">
+    <a href="https://wa.me/919603453944" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
+
   <!-- Hero Slider Script -->
   <script>
     let slides = document.querySelectorAll('.hero-slider .slide');
@@ -93,7 +104,7 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }
-    setInterval(showNextSlide, 5000); // 5 seconds
+    setInterval(showNextSlide, 5000);
   </script>
 
   <!-- Scroll Animation Script -->
