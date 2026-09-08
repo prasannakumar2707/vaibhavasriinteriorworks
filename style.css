@@ -1,105 +1,3 @@
-:root {
-  --gold: #d4af37;
-  --charcoal: #2c2c2c;
-  --white: #ffffff;
-}
-
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--white);
-  color: var(--charcoal);
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--charcoal);
-  color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  z-index: 1000;
-}
-.logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  color: var(--gold);
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-}
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-/* Hero Slider */
-.hero-slider {
-  position: relative;
-  height: 100vh;
-  margin-top: 60px;
-  overflow: hidden;
-}
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.slide.active { opacity: 1; }
-.overlay {
-  background: rgba(0,0,0,0.5);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--white);
-}
-.overlay h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  color: var(--gold);
-  max-width: 900px;
-}
-.btn {
-  background: var(--gold);
-  color: var(--white);
-  padding: 10px 20px;
-  text-decoration: none;
-  margin-top: 15px;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: var(--white);
-  color: var(--gold);
-}
-
-/* Sections */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
 /* Services */
 .service-cards {
   display: flex;
@@ -112,7 +10,7 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   max-width: 300px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 .card img {
   width: 100%;
@@ -122,6 +20,8 @@ h2 {
 }
 .card h3 {
   margin: 15px 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--charcoal);
 }
 .card:hover {
   transform: scale(1.05);
@@ -136,4 +36,71 @@ h2 {
 .contact-form {
   margin-top: 20px;
   display: flex;
-  flex-direction:
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+.contact-form button {
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact-form button:hover {
+  background: var(--charcoal);
+  color: var(--gold);
+}
+
+/* Footer */
+footer {
+  background: var(--charcoal);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  margin: 10px 0;
+}
+.social-links img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.whatsapp img {
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s;
+}
+.whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+/* Fade and Zoom Animation */
+@keyframes fadeZoom {
+  0% {opacity: 0; transform: scale(1.05);}
+  100% {opacity: 1; transform: scale(1);}
+}
+.fade-in.appear {
+  animation: fadeZoom 1.2s ease forwards;
+}
