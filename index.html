@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaibhava Sri Interior Works</title>
-  <!-- Premium Google Fonts -->
+  <!-- Premium Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="logo">Vaibhava Sri Interiors</div>
     <ul class="nav-links">
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -24,32 +24,32 @@
   <section class="hero-slider">
     <div class="slide active" style="background-image: url('images/hero1.jpg');">
       <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
+        <h1>Luxury interior designer in Telangana & Andhra Pradesh · Design across India</h1>
         <a href="#services" class="btn">Explore Services</a>
       </div>
     </div>
     <div class="slide" style="background-image: url('images/hero2.jpg');">
       <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
+        <h1>Luxury interior designer in Telangana & Andhra Pradesh · Design across India</h1>
         <a href="#about" class="btn">Learn More</a>
       </div>
     </div>
     <div class="slide" style="background-image: url('images/hero3.jpg');">
       <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
+        <h1>Luxury interior designer in Telangana & Andhra Pradesh · Design across India</h1>
         <a href="#contact" class="btn">Get in Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about" class="about">
+  <!-- About -->
+  <section id="about" class="about fade-in">
     <h2>About Us</h2>
-    <p>At Vaibhava Sri Interior Works, we specialize in creating elegant, functional, and timeless spaces. Our mission is to blend creativity with craftsmanship, ensuring every project reflects your lifestyle and aspirations.</p>
+    <p>Vaibhava Sri Interiors transforms spaces into timeless expressions of luxury and comfort. Based in Telangana and Andhra Pradesh, we design across India with a passion for creativity and craftsmanship.</p>
   </section>
 
   <!-- Services -->
-  <section id="services" class="services">
+  <section id="services" class="services fade-in">
     <h2>Our Services</h2>
     <div class="service-cards">
       <div class="card"><img src="images/livingroom.jpg" alt="Living Room"><h3>Living Room</h3></div>
@@ -60,12 +60,18 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact fade-in">
     <h2>Contact Us</h2>
     <p>
       📞 <a href="tel:+919603453944">+91 96034 53944</a><br>
       ✉️ <a href="mailto:vaibhavasriinteriors12@gmail.com">vaibhavasriinteriors12@gmail.com</a>
     </p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
@@ -73,7 +79,7 @@
     <p>&copy; 2026 Vaibhava Sri Interior Works | Designed with Elegance</p>
     <div class="social-links">
       <a href="https://www.instagram.com/vaibhavasriinteriors12/?hl=en" target="_blank">
-        <img src="images/instagram.png" alt="Instagram Logo">
+        <img src="images/instagram.png" alt="Instagram">
       </a>
     </div>
   </footer>
@@ -87,7 +93,21 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }
-    setInterval(showNextSlide, 4000); // change every 4 seconds
+    setInterval(showNextSlide, 5000); // 5 seconds
+  </script>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
   </script>
 
 </body>
