@@ -1,31 +1,118 @@
+/* Use premium fonts */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #333;
   background-color: #fff;
+  line-height: 1.6;
 }
 
+/* Headings with accent font */
 h1, h2, h5 {
+  font-family: 'Cormorant Garamond', serif;
   color: #8B6B3F; /* Gold accent */
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
-header {
-  background: linear-gradient(to bottom, #fff8e1, #fff);
+/* Navigation bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.navbar .logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: #8B6B3F;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.navbar .nav-links a:hover {
+  color: #8B6B3F;
 }
 
+/* Hero section */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+}
+.hero .overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.hero .btn {
+  background-color: #8B6B3F;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.hero .btn:hover {
+  background-color: #333;
+  color: #fff8e1;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.gallery-grid .card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.gallery-grid p {
+  padding: 10px;
+  font-weight: 500;
+}
+
+/* Footer */
 footer {
   background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
   border-top: 3px solid #C49A6C;
 }
-
-img {
-  transition: transform 0.3s ease;
-}
-img:hover {
-  transform: scale(1.05);
-}
-
-/* Contact links styling */
 footer a {
   color: #C49A6C;
   text-decoration: none;
@@ -43,10 +130,8 @@ footer a:hover {
   bottom: 20px;
   right: 20px;
   background-color: #25D366;
-  color: #fff;
   border-radius: 50%;
   text-align: center;
-  font-size: 30px;
   box-shadow: 2px 2px 5px #999;
   z-index: 100;
 }
