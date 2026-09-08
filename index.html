@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaibhava Sri Interior Works</title>
   <!-- Premium Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@500&family=Montserrat:wght@500&family=Poppins:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,47 +16,57 @@
     <ul class="nav-links">
       <li><a href="#about">About Us</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#why">Why Choose Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Slider -->
-  <section class="hero-slider">
-    <div class="slide active" style="background-image: url('images/hero1.jpg');">
-      <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
-        <a href="#services" class="btn">Explore Services</a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/hero2.jpg');">
-      <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
-        <a href="#about" class="btn">Learn More</a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/hero3.jpg');">
-      <div class="overlay">
-        <h1>Luxury Interiors for Elegant Living</h1>
-        <a href="#contact" class="btn">Get in Touch</a>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Vaibhava Sri Interior Works</h1>
+      <p>Luxury Interiors for Elegant Living</p>
+      <a href="#services" class="btn">Explore Services</a>
     </div>
   </section>
 
   <!-- About Us -->
   <section id="about" class="about">
     <h2>About Us</h2>
-    <p>At Vaibhava Sri Interior Works, we specialize in creating elegant, functional, and timeless spaces. Our mission is to blend creativity with craftsmanship, ensuring every project reflects your lifestyle and aspirations.</p>
+    <p>We are passionate about transforming spaces into luxurious, functional, and timeless interiors. Our mission is to deliver designs that blend creativity with craftsmanship, ensuring every project reflects your lifestyle and aspirations.</p>
   </section>
 
   <!-- Services -->
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="service-cards">
-      <div class="card"><img src="images/livingroom.jpg" alt="Living Room"><h3>Living Room</h3></div>
-      <div class="card"><img src="images/kitchen.jpg" alt="Kitchen"><h3>Kitchen</h3></div>
-      <div class="card"><img src="images/balcony.jpg" alt="Balcony"><h3>Balcony</h3></div>
-      <div class="card"><img src="images/office.jpg" alt="Office"><h3>Office</h3></div>
+      <div class="card"><img src="images/livingroom.jpg" alt="Living Room"><h3>Living Room</h3><p>Elegant designs with premium finishes.</p></div>
+      <div class="card"><img src="images/kitchen.jpg" alt="Kitchen"><h3>Kitchen</h3><p>Smart, stylish, and functional modular kitchens.</p></div>
+      <div class="card"><img src="images/balcony.jpg" alt="Balcony"><h3>Balcony</h3><p>Relaxing outdoor spaces with modern aesthetics.</p></div>
+      <div class="card"><img src="images/office.jpg" alt="Office"><h3>Office</h3><p>Professional workspaces designed for productivity.</p></div>
     </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-grid">
+      <div class="project-item"><img src="images/project1.jpg" alt="Project 1"><div class="overlay-text">Modern Living Room</div></div>
+      <div class="project-item"><img src="images/project2.jpg" alt="Project 2"><div class="overlay-text">Luxury Kitchen</div></div>
+      <div class="project-item"><img src="images/project3.jpg" alt="Project 3"><div class="overlay-text">Elegant Bedroom</div></div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="why">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>✔️ Premium Quality Materials</li>
+      <li>✔️ Customized Designs</li>
+      <li>✔️ Timely Project Delivery</li>
+      <li>✔️ Experienced Design Team</li>
+    </ul>
   </section>
 
   <!-- Contact -->
@@ -66,29 +76,25 @@
       📞 <a href="tel:+919603453944">+91 96034 53944</a><br>
       ✉️ <a href="mailto:vaibhavasriinteriors12@gmail.com">vaibhavasriinteriors12@gmail.com</a>
     </p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
+
+  <!-- WhatsApp Button -->
+  <div class="whatsapp">
+    <a href="https://wa.me/919603453944" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Vaibhava Sri Interior Works | Designed with Elegance</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/vaibhavasriinteriors12/?hl=en" target="_blank">
-        <img src="images/instagram.png" alt="Instagram Logo">
-      </a>
-    </div>
   </footer>
-
-  <!-- Hero Slider Script -->
-  <script>
-    let slides = document.querySelectorAll('.hero-slider .slide');
-    let current = 0;
-    function showNextSlide() {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }
-    setInterval(showNextSlide, 4000); // change every 4 seconds
-  </script>
 
 </body>
 </html>
