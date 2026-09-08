@@ -3,20 +3,57 @@ body {
   color: #333;
   background-color: #fff;
 }
+
 h1, h2, h5 {
-  color: #8B6B3F;
+  color: #8B6B3F; /* Gold accent */
   font-weight: 600;
 }
+
 header {
   background: linear-gradient(to bottom, #fff8e1, #fff);
 }
+
 footer {
   background-color: #2c2c2c;
   border-top: 3px solid #C49A6C;
 }
+
 img {
   transition: transform 0.3s ease;
 }
 img:hover {
   transform: scale(1.05);
+}
+
+/* Contact links styling */
+footer a {
+  color: #C49A6C;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fff8e1;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px #999;
+  z-index: 100;
+}
+.whatsapp-float img {
+  width: 35px;
+  margin-top: 12px;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
 }
